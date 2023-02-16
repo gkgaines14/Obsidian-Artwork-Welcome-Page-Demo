@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    --gold-highlight: rgb(251, 244, 217);
+    --gold: rgb(239, 224, 163);
+    --primary:rgba(225, 211, 100);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(10, 10, 10);
+    margin: 0;
+    /* padding: 0; */
+}
+
+#nav-bar{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+    /* background-color: black; */
+    background: linear-gradient(to bottom,black 10%, rgb(23, 22, 16)50%,black);
+    /* background: linear-gradient(to bottom,black 10%, rgba(63, 59, 27, 0.319)50%,black); */
+    width: 100%;
+}
+
+#logo-box{
+    display: flex;
+    align-items: center;
+}
+
+#site-name{
+    font-size: 2rem;
+    margin-left: 10px;
+    color: rgb(202, 155, 1);
+}
+
+.highlight{
+    color: var(--gold);
+}
+
+#logo{
+    width: 50px;
+}
+
+#menu-box{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.menu-tile{
+    margin: 10px;
+    font-size: 1.3rem ;
+    color: var(--primary);
+
+}
+
+.menu-tile:hover{
+    cursor: pointer;
+    color: var(--gold-highlight);
+}
+
+
+/* .box{
+    background-color: rgb(65, 14, 14);
+    height: 7000px;
+} */
+
