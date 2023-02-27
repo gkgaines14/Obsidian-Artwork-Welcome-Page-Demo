@@ -30,7 +30,6 @@ img{
 }
 
 .box{
-    /* background-color: rgb(208, 177, 24); */
     background-color: rgb(186, 156, 7);
     height:60px;
     width: 200px;
@@ -41,8 +40,6 @@ img{
     border: white solid 1.5px;
     box-shadow: 
         inset 0 0px 15px 12px rgba(225, 211, 100, 0.83);
-        /* 0 0px 20px 3px rgba(191, 184, 122, 0.524); */
-    /* box-shadow: inset 0 0px 15px 12px rgba(240, 240, 189, 0.83); */
     color: rgb(48, 46, 3);
     font-size: 2rem;
     font-weight: 700px;
@@ -50,6 +47,7 @@ img{
     position: absolute;
     margin: 80px 280px 0 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 
@@ -189,3 +187,53 @@ img{
         background-color:rgb(235, 217, 21) ;
     }
 }
+
+/* .shimmer {
+    -webkit-mask:linear-gradient(-60deg,#fbf6a0 55%,rgba(255, 255, 254, 0.612),#fbf6a0 70%) right/300% 100%;
+    animation: shimmer 2.5s infinite;
+
+  }
+  
+  @keyframes shimmer {
+    100% {-webkit-mask-position:left}
+  } */
+
+.shimmer:before{
+    content:"";
+    position: absolute;
+    height: 200px;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgb(251, 241, 213);
+    filter: blur(1px);
+    opacity: 0.8;
+    top: -120px;
+    transition:.8s ease-in;
+    transform: rotate(-50deg) translateX(-130px);
+}
+
+.shimmer:hover:before{
+    transform: rotate(-70deg) translate(140px, 100px);
+}
+
+.shimmer-two:before{
+    content:"";
+    position: absolute;
+    height: 200px;
+    width: 40px;
+    background-color: rgba(253, 239, 195, 0.903);
+    box-shadow: 0 0 10px rgb(249, 243, 229);
+    filter: blur(8px);
+    opacity: 0.4;
+    top: -120px;
+    transition:.6s ease-in;
+    transform: rotate(-50deg) translateX(-130px);
+}
+
+
+.shimmer-two:hover:before{
+    transform: rotate(-70deg) translate(140px, 100px);
+}
+/* .shimmer-on{
+    transform: rotate(-20deg) translate(140px, 70px);
+} */

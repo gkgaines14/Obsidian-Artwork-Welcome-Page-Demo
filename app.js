@@ -4,8 +4,17 @@ console.log(button)
 
 button.addEventListener('click',start);
 
+// button.classList.add('')
+
+
 function start (){
     // document.querySelector('.test').innerHTML = 'Welcome'
+
+    var audio = new Audio('drop-it-124014.mp3');
+    setTimeout(()=>audio.play(),100);
+    audio.volume = 0.4;
+    audio.loop=true;
+
     button.innerHTML = 'Welcome';
     button.className = 'box glow';
     document.querySelector('img').className = 'show';
